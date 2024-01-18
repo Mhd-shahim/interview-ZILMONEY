@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All products</h1>
+    {% for item in prod %}
+        <a href="{% url 'product_details' item.id %}" style="width: 100px; height:50px; background-color:rgb(223, 196, 196)">{{item.name}}</a><hr>
+    {% endfor %}
+</body>
+</html>

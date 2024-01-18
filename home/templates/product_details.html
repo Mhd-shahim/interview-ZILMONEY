@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+        
+        <div style="width: 300px; height: 500px;">
+            <h3>{{prod.name}}</h3>
+            <hr>
+            <p>{{prod.description}}</p>
+            <h5>quantity :{{prod.available_quantity}}</h5>
+        </div>
+        <div style="margin-top: -300px;">
+            <form method="post" action="">
+            {% csrf_token%}
+            <input type="number" placeholder="quantity" style="width:70px">
+            <button type="submit">Purchase</button>
+            </form>
+        </div>
+</body>
+</html>
